@@ -24,7 +24,7 @@ unless file.eof?
 	end
 end
 #set the words 'lyl' and 'm' to mean 'bob' and 'a'
-$translation = { l: 'b', y: 'o', m: 'a', z: 'n', j: 'd', i: 'e', f: 'h', u: 's', v: 'r', s: 'u', e: 'i', x: 'p', p: 'x', k: 'c', b: 'l', r: 'v', o: 'y', h: 'f', c: 'k', a: 'm' , q: 'w', w: 'q'}
+$translation = { l: 'b', y: 'o', m: 'a', z: 'n', j: 'd', i: 'e', f: 'h', u: 's', v: 'r', s: 'u', e: 'i', x: 'p', p: 'x', k: 'c', b: 'l', r: 'v', o: 'y', h: 'f', c: 'k', a: 'm' , q: 'w', w: 'q', n: 'z', d: 'j'}
 
 #make a guess for 'i' and 's,' then check that an 'is' exists in the text
 puts translate

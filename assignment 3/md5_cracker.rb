@@ -1,4 +1,6 @@
-#https://github.com/danielmiessler/SecLists/tree/master/Passwords
+#An example password dictionary can be found below.
+#https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm
+#Whatever you use, rename it to dictionary.txt and make sure each entry is line-seperated!
 
 require 'digest'
 
@@ -6,7 +8,7 @@ require 'digest'
 if File.exist? 'dictionary.txt'
 	dictionary = File.open 'dictionary.txt'
 else
-	puts 'Couldn not find dictionary.txt! Aborting.'
+	puts 'Could not find dictionary.txt! Aborting.'
 	return
 end
 
@@ -19,6 +21,7 @@ hashes.each do |hash|
 	found = false
 	start = Time.now
 	#check the hash we are on against hashes of passwords from the dictionary until we find a match.
+	#TODO multithreading!!
 	dictionary.each_line do |line|
 		line.chomp!
 	  if (Digest::MD5.hexdigest line).eql? hash

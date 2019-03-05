@@ -1,0 +1,18 @@
+I used the giant password dictionary at https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm
+I first tried https://github.com/danielmiessler/SecLists/tree/master/Passwords, but couldn't find one that worked. Then
+I tried the smaller one from crackstation, but it could only get #1, 3, and 6. This 15gb one got them all, but took forever.
+
+1. 181003 (27 seconds)
+2. 41167 (92 seconds)
+3. QINGFANG (797 seconds)
+4. lion8888 (691 seconds)
+5. victorboy (961 seconds)
+6. wakemeupwhenseptemberends (967 seconds)
+
+Since my password dictionary is so large, I opted to read from disk instead of loading the passwords into ram. That,
+combined with me using ruby, which is interpreted, definitely made cracking take longer than it needed to.
+
+I attempted to speed up the process by creating a separate thread for every hash! The official ruby interpreter cannot
+create actual OS-level threads, though, I guess...? So I used jruby, and it worked! However, I think it runs slower
+than the official one. The first password took 55 seconds instead of 27! Overall, though, only 1440 seconds passed before
+all 6 of the passwords were found.

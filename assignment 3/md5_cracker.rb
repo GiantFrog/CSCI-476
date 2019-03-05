@@ -26,8 +26,8 @@ hashes.each do |hash|
 		line.chomp!
 	  if (Digest::MD5.hexdigest line).eql? hash
 			finish = Time.now
-			puts "Password: #{line}"
 			puts "Password discovered in #{finish - start} seconds."
+			puts "Password: #{line}"
 			found = true
 			break
 		end
@@ -36,8 +36,8 @@ hashes.each do |hash|
 	#print the disappointment if no match was found.
 	unless found
 		finish = Time.now
-		puts 'The password could not be found.'
 		puts "#{finish - start} seconds have elapsed."
+		puts 'The password could not be found.'
 	end
 
 	#close the file and reopen the dictionary so we can start the process from the beginning again.

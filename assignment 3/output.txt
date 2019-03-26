@@ -1,0 +1,25 @@
+Hash: 6f047ccaa1ed3e8e05cde1c7ebc7d958
+Password discovered in 27.223643942 seconds.
+Password: 181003
+
+Hash: 275a5602cd91a468a0e10c226a03a39c
+Password discovered in 91.536469177 seconds.
+Password: 41167
+
+Hash: b4ba93170358df216e8648734ac2d539
+Password discovered in 796.747063878 seconds.
+Password: QINGFANG
+
+Hash: dc1c6ca00763a1821c5af993e0b6f60a
+Password discovered in 691.248252656 seconds.
+Password: lion8888
+
+Hash: 8cd9f1b962128bd3d3ede2f5f101f4fc
+Password discovered in 960.677601331 seconds.
+Password: victorboy
+
+Hash: 554532464e066aba23aee72b95f18ba2
+Password discovered in 967.40872786 seconds.
+Password: wakemeupwhenseptemberends
+
+Process finished with exit code 0

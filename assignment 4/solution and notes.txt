@@ -1,0 +1,20 @@
+128.3.23.2
+128.3.23.5
+128.3.23.117
+128.3.23.158
+128.3.164.248 (only sent 4)
+128.3.164.249 (probably not a scan, only sent a single packet!)
+
+https://github.com/packetfu/packetfu
+I used the PacketFu library to read the pcap file. While it worked great with files from my own network, this example
+was huge!! I wanted to iterate through evey packet without loading more than one at a time into memory, but I couldn't
+find a library that supports this. The packet objects PacketFu was creating were so large it ate up all my system's ram
+and didn't finish after 4 hours.
+
+My solution was to make a small edit to the library itself. The read_packets method now checks to see if a packet has a
+syn flag set before it adds it to the array packets to return when reading a pcap file. This is a bad, hack-y way to do
+things, and if I had the time I'd much rather make my own method. That being said.. It works. It uses no more than a few
+dozen MB and finishes in 10-30 minutes.
+
+The file edited is 'pcap.rb' lines 315-317. Everything still runs on smaller files without this edit! With more memory,
+it should work with the large example file as well.
